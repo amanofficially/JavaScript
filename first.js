@@ -5,3 +5,5 @@ console.log("Hello World");
 let a = 10;
 var b = 10;
 const c = 30;
+
+console.log(a + b);
