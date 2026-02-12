@@ -232,7 +232,6 @@
 // let sum = num1 + num2;
 // console.log("Sum =", sum);
 
-
 /*
 ====================================================
 03. Functions in JavaScript
@@ -265,7 +264,6 @@ function greet(name) {
 
 console.log(greet("Aman"));
 
-
 // ==================================================
 // 2. Function Expression
 // ==================================================
@@ -280,7 +278,6 @@ const add = function (a, b) {
 };
 
 console.log("Sum:", add(10, 20));
-
 
 // ==================================================
 // 3. Arrow Functions (ES6)
@@ -304,7 +301,6 @@ const square = (num) => num * num;
 
 console.log("Square:", square(6));
 
-
 // ==================================================
 // 4. Scope in JavaScript
 // ==================================================
@@ -327,7 +323,6 @@ function showGlobal() {
 showGlobal();
 console.log(globalVar);
 
-
 // Local Scope
 function localExample() {
   let localVar = "I am Local";
@@ -336,7 +331,6 @@ function localExample() {
 
 localExample();
 // console.log(localVar); // Error: localVar is not defined
-
 
 // ==================================================
 // Example: Global vs Local
@@ -351,7 +345,6 @@ function testScope() {
 
 testScope();
 console.log("Outside Function:", x);
-
 
 /*
 ====================================================
@@ -377,6 +370,52 @@ Scope:
 ====================================================
 */
 
+/*
+====================================================
+04. Arrays & Objects in JavaScript (IN FULL DETAIL)
+====================================================
+
+Arrays and Objects are NON-PRIMITIVE data types.
+They store multiple values and are reference types.
+
+----------------------------------------------------
+Topics Covered:
+1. Arrays (Basics)
+2. Array Methods (Mutating & Non-Mutating)
+3. Objects (Basics)
+4. Object Methods
+5. Array of Objects (Real-world use)
+====================================================
+*/
+
+// ==================================================
+// 1. ARRAYS – BASICS
+// ==================================================
+
+/*
+An array is a collection of values stored
+in a single variable.
+
+- Index based (starts from 0)
+- Can store multiple data types
+*/
+
+let arr = [10, 20, 30, 40, 50];
+
+console.log("Array:", arr);
+console.log("First Element:", arr[0]);
+console.log("Last Element:", arr[arr.length - 1]);
+
+// Arrays can store mixed data types
+let mixedArray = [10, "Aman", true, null, undefined];
+console.log("Mixed Array:", mixedArray);
+
+// Change array value
+arr[1] = 25;
+console.log("Updated Array:", arr);
+
+// Array length
+console.log("Array Length:", arr.length);
 
 /*
 ====================================================
@@ -426,7 +465,7 @@ arr1.splice(1, 1, 25);
 console.log("After splice():", arr1);
 
 // sort() → sort array (mutates original)
-let arr2 = [4, 1, 8, 2];
+let arr2 = [40, 10, 80, 20];
 arr2.sort();
 console.log("After sort():", arr2);
 
@@ -446,7 +485,6 @@ console.log("Original Array:", arr3);
 // map() → transform each element
 let mapResult = arr3.map((num) => num * 2);
 console.log("map() Result:", mapResult);
-console.log("After map():", arr3);
 
 // filter() → filter elements
 let filterResult = arr3.filter((num) => num > 20);
@@ -496,147 +534,6 @@ Non-Mutating Methods:
 - join()
 */
 
-
-
-/*
-====================================================
-04. Arrays & Objects in JavaScript (IN FULL DETAIL)
-====================================================
-
-Arrays and Objects are NON-PRIMITIVE data types.
-They store multiple values and are reference types.
-
-----------------------------------------------------
-Topics Covered:
-1. Arrays (Basics)
-2. Array Methods (Mutating & Non-Mutating)
-3. Objects (Basics)
-4. Object Methods
-5. Array of Objects (Real-world use)
-====================================================
-*/
-
-
-// ==================================================
-// 1. ARRAYS – BASICS
-// ==================================================
-
-/*
-An array is a collection of values stored
-in a single variable.
-
-- Index based (starts from 0)
-- Can store multiple data types
-*/
-
-let arr = [10, 20, 30, 40, 50];
-
-console.log("Array:", arr);
-console.log("First Element:", arr[0]);
-console.log("Last Element:", arr[arr.length - 1]);
-
-// Arrays can store mixed data types
-let mixedArray = [10, "Aman", true, null, undefined];
-console.log("Mixed Array:", mixedArray);
-
-// Change array value
-arr[1] = 25;
-console.log("Updated Array:", arr);
-
-// Array length
-console.log("Array Length:", arr.length);
-
-
-// ==================================================
-// 2. ARRAY METHODS
-// ==================================================
-
-/*
-Array methods are built-in functions
-to perform operations on arrays.
-
-There are two types:
-1. Mutating Methods (change original array)
-2. Non-Mutating Methods (do NOT change original)
-*/
-
-
-// --------------------------------------------------
-// 2.1 MUTATING ARRAY METHODS
-// --------------------------------------------------
-
-let nums = [1, 2, 3, 4];
-console.log("Original nums:", nums);
-
-// push() – add element at end
-nums.push(5);
-console.log("After push():", nums);
-
-// pop() – remove last element
-nums.pop();
-console.log("After pop():", nums);
-
-// unshift() – add element at start
-nums.unshift(0);
-console.log("After unshift():", nums);
-
-// shift() – remove first element
-nums.shift();
-console.log("After shift():", nums);
-
-// splice() – add/remove elements
-// splice(startIndex, deleteCount, items)
-nums.splice(1, 1, 99);
-console.log("After splice():", nums);
-
-// sort() – sorts array (mutates)
-let unsorted = [3, 1, 5, 2];
-unsorted.sort();
-console.log("After sort():", unsorted);
-
-// reverse() – reverse array
-unsorted.reverse();
-console.log("After reverse():", unsorted);
-
-
-// --------------------------------------------------
-// 2.2 NON-MUTATING ARRAY METHODS
-// --------------------------------------------------
-
-let numbers = [10, 20, 30, 40];
-
-// map() – transform each element
-let doubled = numbers.map((num) => num * 2);
-console.log("map() Result:", doubled);
-console.log("Original after map():", numbers);
-
-// filter() – filter based on condition
-let filtered = numbers.filter((num) => num > 20);
-console.log("filter() Result:", filtered);
-
-// reduce() – reduce array to single value
-let total = numbers.reduce((sum, num) => sum + num, 0);
-console.log("reduce() Sum:", total);
-
-// slice() – extract portion (non-mutating)
-let sliced = numbers.slice(1, 3);
-console.log("slice() Result:", sliced);
-
-// concat() – merge arrays
-let extra = [50, 60];
-let merged = numbers.concat(extra);
-console.log("concat() Result:", merged);
-
-// includes() – check value exists
-console.log("includes(20):", numbers.includes(20));
-
-// indexOf() – get index
-console.log("indexOf(30):", numbers.indexOf(30));
-
-// join() – convert to string
-console.log("join():", numbers.join(", "));
-
-
 // ==================================================
 // 3. OBJECTS – BASICS
 // ==================================================
@@ -671,7 +568,6 @@ console.log("After Adding City:", student);
 delete student.isActive;
 console.log("After Delete:", student);
 
-
 // ==================================================
 // 4. OBJECT METHODS
 // ==================================================
@@ -691,11 +587,7 @@ console.log("Object.values():", Object.values(student));
 console.log("Object.entries():", Object.entries(student));
 
 // hasOwnProperty() – check property exists
-console.log(
-  "Has 'name' property:",
-  student.hasOwnProperty("name")
-);
-
+console.log("Has 'name' property:", student.hasOwnProperty("name"));
 
 // ==================================================
 // 5. ARRAY OF OBJECTS (REAL-WORLD EXAMPLE)
@@ -726,7 +618,6 @@ console.log("Adult Users:", adults);
 let userFound = users.find((user) => user.id === 2);
 console.log("User Found:", userFound);
 
-
 // ==================================================
 // IMPORTANT CONCEPTS
 // ==================================================
@@ -744,7 +635,6 @@ let b = a;
 b.push(4);
 console.log("a:", a);
 console.log("b:", b);
-
 
 /*
 ====================================================
