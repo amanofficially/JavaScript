@@ -37,9 +37,7 @@ and executed after the main task is completed.
 function greet(name, callback) {
   console.log("Hello " + name);
 
-  if (typeof callback === "function") {
-    callback();
-  }
+  callback();
 }
 
 function afterGreeting() {
