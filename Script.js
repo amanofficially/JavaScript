@@ -668,3 +668,217 @@ Array of Objects:
 - Used in real applications and APIs
 ====================================================
 */
+
+/*
+====================================================
+05. Strings & Numbers in JavaScript
+====================================================
+
+Strings and Numbers are PRIMITIVE data types.
+
+----------------------------------------------------
+Topics Covered:
+1. Strings
+2. String Methods
+3. Template Literals
+4. Numbers
+5. Number Methods
+====================================================
+*/
+
+// ==================================================
+// 1. STRINGS – BASICS
+// ==================================================
+
+/*
+A string is a sequence of characters.
+It can be written using:
+- Single quotes ('')
+- Double quotes ("")
+- Backticks (``)
+*/
+
+let str1 = "JavaScript";
+let str2 = "Programming";
+
+console.log(str1);
+console.log(str2);
+
+// String length
+console.log("Length:", str1.length);
+
+// Access characters
+console.log("First character:", str1[0]);
+console.log("Last character:", str1[str1.length - 1]);
+
+// ==================================================
+// 2. STRING METHODS
+// ==================================================
+
+let text = "  Hello JavaScript World  ";
+
+// toUpperCase()
+console.log("toUpperCase():", text.toUpperCase());
+
+// toLowerCase()
+console.log("toLowerCase():", text.toLowerCase());
+
+// trim() – remove spaces from start and end
+console.log("trim():", text.trim());
+
+// trimStart()
+console.log("trimStart():", text.trimStart());
+
+// trimEnd()
+console.log("trimEnd():", text.trimEnd());
+
+// includes() – check substring exists
+console.log("includes('JavaScript'):", text.includes("JavaScript"));
+
+// indexOf()
+console.log("indexOf('JavaScript'):", text.indexOf("JavaScript"));
+
+// slice(start, end)
+console.log("slice():", text.slice(2, 7));
+
+// substring(start, end)
+console.log("substring():", text.substring(2, 7));
+
+// replace()
+console.log("replace():", text.replace("JavaScript", "JS"));
+
+// replaceAll()
+console.log("replaceAll():", text.replaceAll(" ", "-"));
+
+// split() – convert string to array
+let words = text.trim().split(" ");
+console.log("split():", words);
+
+// charAt()
+console.log("charAt(1):", text.charAt(2));
+
+// startsWith()
+console.log("startsWith('  Hello'):", text.startsWith("  Hello"));
+
+// endsWith()
+console.log("endsWith('World  '):", text.endsWith("World  "));
+
+// ==================================================
+// 3. TEMPLATE LITERALS
+// ==================================================
+
+/*
+Template literals use backticks (`).
+They allow:
+- Variable interpolation
+- Multi-line strings
+*/
+
+let name = "Aman";
+let age = 22;
+
+// Old way
+let msg1 = "My name is " + name + " and I am " + age + " years old.";
+console.log(msg1);
+
+// Template literal
+let msg2 = `My name is ${name} and I am ${age} years old.`;
+console.log(msg2);
+
+// Multi-line string
+let multiLine = `
+Name: ${name}
+Age: ${age}
+Course: BCA
+`;
+
+console.log(multiLine);
+
+// ==================================================
+// 4. NUMBERS – BASICS
+// ==================================================
+
+/*
+Numbers can be:
+- Integer
+- Float
+*/
+
+let num1 = 100;
+let num2 = 10.567;
+
+console.log("num1:", num1);
+console.log("num2:", num2);
+
+// Arithmetic operations
+console.log("Addition:", num1 + num2);
+console.log("Subtraction:", num1 - num2);
+console.log("Multiplication:", num1 * num2);
+console.log("Division:", num1 / num2);
+
+// ==================================================
+// 5. NUMBER METHODS
+// ==================================================
+
+// toFixed() – round to fixed decimals (returns string)
+console.log("toFixed(2):", num2.toFixed(2));
+
+// parseInt() – convert to integer
+let n1 = "50px";
+console.log("parseInt():", parseInt(n1));
+
+// parseFloat() – convert to float
+let n2 = "12.75";
+console.log("parseFloat():", parseFloat(n2));
+
+// isNaN() – check Not-a-Number
+console.log("isNaN('abc'):", isNaN("abc"));
+console.log("isNaN(10):", isNaN(10));
+
+// Number.isInteger()
+console.log("isInteger(10):", Number.isInteger(10));
+console.log("isInteger(10.5):", Number.isInteger(10.5));
+
+// Number.MAX_VALUE
+console.log("MAX_VALUE:", Number.MAX_VALUE);
+
+// Number.MIN_VALUE
+console.log("MIN_VALUE:", Number.MIN_VALUE);
+
+// Math methods
+console.log("Math.round():", Math.round(10.6));
+console.log("Math.floor():", Math.floor(10.9));
+console.log("Math.ceil():", Math.ceil(10.1));
+console.log("Math.random():", Math.floor(Math.random(10) * 10) + 1);
+
+/*
+====================================================
+SUMMARY
+====================================================
+
+Strings:
+- Primitive data type
+- Immutable
+
+String Methods:
+- toUpperCase(), toLowerCase()
+- trim(), includes(), indexOf()
+- slice(), substring()
+- replace(), replaceAll()
+- split(), charAt()
+- startsWith(), endsWith()
+
+Template Literals:
+- Use backticks
+- Variable interpolation using ${}
+
+Numbers:
+- Primitive data type
+
+Number Methods:
+- toFixed()
+- parseInt(), parseFloat()
+- isNaN(), Number.isInteger()
+- Math methods
+====================================================
+*/
