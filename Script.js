@@ -232,10 +232,44 @@
 // let sum = num1 + num2;
 // console.log("Sum =", sum);
 
+//Array Methods
+// let arr = [1, 2, 3, 4, 5];
 
+// arr.forEach((num) => {
+//   console.log(num * 5);
+// });
 
+// let arr = [1, 2, 3, 4, 5];
 
+// let result = arr.map(function (number) {
+//   return number * 2;
+// });
 
+// console.log(result);
 
+// let arr = [1, 2, 3, 4, 5];
+// const result = arr.filter((num) => {
+//   return num % 2 === 0;
+// });
 
+// console.log(result);
 
+// let arr = [10, 20, 30, 40, 50, 60, 80, 100];
+// const result = arr.reduce((accumlator, currentValue) => {
+//   return accumlator + currentValue;
+// }, 0);
+// console.log(`Sum of all numbers present in the array : ${result}`);
+
+const userCart = [
+  { productId: 1, ProductName: "Mobiile", Price: 12000 },
+  { productId: 2, ProductName: "Laptop", Price: 120000 },
+  { productId: 3, ProductName: "Charger", Price: 2000 },
+];
+
+const totalAmount = userCart.reduce((total, currentProduct) => {
+  return total + currentProduct.Price;
+}, 0);
+
+console.log(
+  `Total Amount of products present in the user's cart is ${totalAmount} rupees.`,
+);
