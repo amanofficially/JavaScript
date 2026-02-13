@@ -41,14 +41,40 @@
 //   console.log("Not Palindrome");
 // }
 
-let str = "javascript";
-let count = 0;
+//Asychronus JavaScript
 
-for (let i = 0; i < str.length; i++) {
-  let ch = str[i].toLowerCase();
-  if (ch === "a" || ch === "e" || ch === "i" || ch === "o" || ch === "u") {
-    count++;
-  }
+// console.log("Script Started");
+
+// for (let i = 1; i <= 30; i++) {
+//   console.log("Inside the loop...");
+// }
+// console.log("Script Ended");
+
+// console.log("Script Started");
+
+// const id = setTimeout(() => {
+//   for (let i = 1; i <= 100; i++) {
+//     console.log("Inside the loop...");
+//   }
+// }, 1000);
+
+// console.log("Script Ended");
+// clearTimeout(id);
+
+function first(callback) {
+  console.log(`Welcome!`);
+  const myobj = {
+    fname: "Aman",
+    lname: "Patel",
+    age: 22,
+    city: "Indore",
+  };
+  console.log(
+    `User ${myobj.fname} ${myobj.lname} and the age of the user is ${myobj.age} and he is from ${myobj.city}.`,
+  );
+  callback();
 }
 
-console.log(count);
+first(() => {
+  console.log(`Greeting ended !`);
+});
