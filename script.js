@@ -61,6 +61,18 @@
 // console.log("Script Ended");
 // clearTimeout(id);
 
+// console.log(`Script stared !`);
+// let count = 0;
+// let id = setInterval(() => {
+//   console.log("Hello World !");
+//   count++;
+//   if (count === 10) {
+//     clearInterval(id);
+//   }
+// }, 1000);
+
+// console.log(`Script ended !`);
+
 // function first(callback) {
 //   console.log(`Welcome!`);
 //   const myobj = {
@@ -79,12 +91,22 @@
 //   console.log(`Greeting ended !`);
 // });
 
-let count = 0;
-
-let id = setInterval(() => {
-  console.log("Hello World !");
-  count++;
-  if (count === 10) {
-    clearInterval(id);
+function getAndAddTwoNumbers(number1, number2, onSucces, onFailure) {
+  if (typeof number1 === "number" && typeof number2 === "number") {
+    onSucces(number1, number2);
+  } else {
+    onFailure();
   }
-}, 1000);
+}
+
+getAndAddTwoNumbers(
+  30,
+  40,
+  (num1, num2) => {
+    console.log(`Sum of the numbers is : ${num1 + num2}`);
+  },
+  () => {
+    console.log(`Wrong data type.`);
+    console.log(`Please give correct intput.`);
+  },
+);

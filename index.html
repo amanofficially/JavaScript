@@ -3,23 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <title>DOM Manipulation</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        height: 90vh;
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content {
+        border-radius: 20px;
+        padding: 20px;
+        background-color: #afafaf;
+      }
+    </style>
   </head>
   <body>
-    <h1 id="title">DOM Manipulation in JavaScript</h1>
+    <div class="content">
+      <h1 id="title">DOM Manipulation in JavaScript</h1>
 
-    <p class="text">This is paragraph one.</p>
-    <p class="text">This is paragraph two.</p>
+      <p class="text">This is paragraph one.</p>
+      <p class="text">This is paragraph two.</p>
 
-    <button id="btn">Click Me</button>
+      <button id="btn">Click Me</button>
+      <button id="btn">Click Me</button>
 
-    <form id="userForm">
-      <input type="text" id="username" placeholder="Enter name" />
-      <input type="number" id="age" placeholder="Enter age" />
-      <button type="submit">Submit</button>
-    </form>
+      <form id="userForm">
+        <input type="text" id="username" placeholder="Enter name" />
+        <input type="number" id="age" placeholder="Enter age" />
+        <button type="submit">Submit</button>
+      </form>
 
-    <p id="output"></p>
+      <p id="output"></p>
+    </div>
 
     <script src="Chapter6.js"></script>
   </body>
