@@ -61,20 +61,30 @@
 // console.log("Script Ended");
 // clearTimeout(id);
 
-function first(callback) {
-  console.log(`Welcome!`);
-  const myobj = {
-    fname: "Aman",
-    lname: "Patel",
-    age: 22,
-    city: "Indore",
-  };
-  console.log(
-    `User ${myobj.fname} ${myobj.lname} and the age of the user is ${myobj.age} and he is from ${myobj.city}.`,
-  );
-  callback();
-}
+// function first(callback) {
+//   console.log(`Welcome!`);
+//   const myobj = {
+//     fname: "Aman",
+//     lname: "Patel",
+//     age: 22,
+//     city: "Indore",
+//   };
+//   console.log(
+//     `User ${myobj.fname} ${myobj.lname} and the age of the user is ${myobj.age} and he is from ${myobj.city}.`,
+//   );
+//   callback();
+// }
 
-first(() => {
-  console.log(`Greeting ended !`);
-});
+// first(() => {
+//   console.log(`Greeting ended !`);
+// });
+
+let count = 0;
+
+let id = setInterval(() => {
+  console.log("Hello World !");
+  count++;
+  if (count === 10) {
+    clearInterval(id);
+  }
+}, 1000);
