@@ -139,8 +139,13 @@
 //   },
 // );
 // IIFE
-(function sayHello(){
-  console.log(`Hello World !`);
-})();
+// (function sayHello() {
+//   console.log(`Hello World !`);
+// })();
 
+function add() {
+  var sum = 2 + 3;
+  console.log(sum);
+}
 
+add();
