@@ -1,104 +1,184 @@
 "use strict";
 
 /*
-========================================================
- COMPLETE JAVASCRIPT SCRIPT (BEGINNER → ADVANCED)
- Theory + Code in ONE FILE
-========================================================
+====================================================================
+ JAVASCRIPT FULL COURSE
+ Beginner → Advanced → Interview Ready
+ Theory + Code in ONE JS FILE
+====================================================================
 */
 
-/* ======================================================
-  1. JAVASCRIPT INTRO
-====================================================== */
-// JavaScript ek programming language hai
-// Jo websites ko interactive banati hai
-// Browser ke andar run hoti hai
+/* ******************************************************************
+  SECTION 1: INTRODUCTION TO JAVASCRIPT
+******************************************************************* */
 
-console.log("JavaScript Started");
+/*
+JavaScript is a programming language used to make web pages interactive.
 
-/* ======================================================
-  2. ECMASCRIPT
-====================================================== */
-// ECMAScript rules define karta hai
-// JavaScript un rules ko follow karti hai
+HTML  -> Structure
+CSS   -> Styling
+JS    -> Logic / Behavior
 
-let esVersion = "ES6";
-const releaseYear = 2015;
-console.log(esVersion, releaseYear);
+JavaScript is:
+- Lightweight
+- Interpreted
+- Dynamically typed
+- Single-threaded
+- Event-driven
 
-/* ======================================================
-  3. VARIABLES
-====================================================== */
-// var → old (function scoped)
-// let → block scoped
-// const → block scoped + fixed reference
+JavaScript runs:
+- In Browser (Frontend)
+- On Server (Node.js)
+*/
 
-var a = 10;
-let b = 20;
-const c = 30;
+console.log("JavaScript Full Course Started");
 
-console.log(a, b, c);
+/* ******************************************************************
+  SECTION 2: ECMASCRIPT
+******************************************************************* */
 
-/* ======================================================
-  4. DATA TYPES
-====================================================== */
-let str = "Aman";      // String
-let num = 25;          // Number
-let bool = true;       // Boolean
-let undef;             // Undefined
-let nul = null;        // Null
-let big = 10n;         // BigInt
-let sym = Symbol("id");// Symbol
+/*
+ECMAScript is a STANDARD.
+JavaScript is an IMPLEMENTATION.
+
+ECMAScript defines:
+- syntax
+- rules
+- features
+
+ES6 (2015) was a major update:
+- let, const
+- arrow functions
+- promises
+*/
+
+let standard = "ECMAScript";
+const version = "ES6";
+console.log(standard, version);
+
+/* ******************************************************************
+  SECTION 3: VARIABLES
+******************************************************************* */
+
+/*
+Variables store data.
+
+var:
+- function scoped
+- can redeclare
+- causes bugs (avoid)
+
+let:
+- block scoped
+- value can change
+
+const:
+- block scoped
+- cannot reassign reference
+*/
+
+var x = 10;
+let y = 20;
+const z = 30;
+
+console.log(x, y, z);
+
+/* ******************************************************************
+  SECTION 4: DATA TYPES
+******************************************************************* */
+
+/*
+JavaScript is dynamically typed.
+
+Primitive Types:
+- String
+- Number
+- Boolean
+- Undefined
+- Null
+- BigInt
+- Symbol
+
+Non-Primitive:
+- Object
+- Array
+- Function
+*/
+
+let str = "Aman";
+let num = 25;
+let bool = true;
+let undef;
+let nul = null;
 
 console.log(typeof str, typeof num, typeof bool);
-console.log(typeof undef, nul);
+console.log(undef, nul);
 
-/* ======================================================
-  5. STRING METHODS
-====================================================== */
-let name = "  javascript  ";
+/* ******************************************************************
+  SECTION 5: UNDEFINED vs NULL
+******************************************************************* */
 
-console.log(name.length);
-console.log(name.toUpperCase());
-console.log(name.toLowerCase());
-console.log(name.trim());
-console.log(name.slice(0, 4));
+/*
+undefined:
+- variable declared but value not assigned
 
-/* ======================================================
-  6. TEMPLATE STRING
-====================================================== */
-let user = "Aman";
-let age = 21;
-console.log(`My name is ${user} and age is ${age}`);
+null:
+- intentional empty value
+*/
 
-/* ======================================================
-  7. OPERATORS
-====================================================== */
+let a;
+let b = null;
+
+/* ******************************************************************
+  SECTION 6: OPERATORS
+******************************************************************* */
+
+/*
+Arithmetic: + - * / %
+Comparison: == === != !== > <
+Logical: && || !
+*/
+
 console.log(5 + 5);
-console.log(10 - 5);
-console.log(5 * 2);
-console.log(10 / 2);
-console.log(10 % 3);
+console.log(5 === "5"); // false
 
-/* ======================================================
-  8. COMPARISON
-====================================================== */
-console.log(5 == "5");   // true
-console.log(5 === "5");  // false
-console.log(5 != 6);
-console.log(5 > 3);
+/* ******************************************************************
+  SECTION 7: STRINGS
+******************************************************************* */
 
-/* ======================================================
-  9. LOGICAL OPERATORS
-====================================================== */
-console.log(true && false);
-console.log(true || false);
-console.log(!true);
+/*
+Strings are immutable (cannot change original string)
+*/
 
-/* ======================================================
-  10. IF ELSE
-====================================================== */
-let number = 7;
+let language = "  JavaScript  ";
+
+console.log(language.trim());
+console.log(language.toUpperCase());
+console.log(language.slice(0, 4));
+
+/* ******************************************************************
+  SECTION 8: TEMPLATE LITERALS
+******************************************************************* */
+
+/*
+Use backticks ``
+Allows variable embedding
+*/
+
+let name = "Aman";
+let age = 21;
+console.log(`My name is ${name} and age is ${age}`);
+
+/* ******************************************************************
+  SECTION 9: CONDITIONAL STATEMENTS
+******************************************************************* */
+
+/*
+if-else -> decision making
+switch  -> fixed values
+*/
+
+let number = 10;
 
 if (number % 2 === 0) {
   console.log("Even");
@@ -106,63 +186,63 @@ if (number % 2 === 0) {
   console.log("Odd");
 }
 
-/* ======================================================
-  11. SWITCH
-====================================================== */
-let day = 2;
+/* ******************************************************************
+  SECTION 10: LOOPS
+******************************************************************* */
 
-switch (day) {
-  case 1:
-    console.log("Monday");
-    break;
-  case 2:
-    console.log("Tuesday");
-    break;
-  default:
-    console.log("Invalid");
-}
+/*
+Loops repeat code
+*/
 
-/* ======================================================
-  12. LOOPS
-====================================================== */
 for (let i = 1; i <= 3; i++) {
-  console.log("For loop", i);
+  console.log("Loop", i);
 }
 
-let j = 1;
-while (j <= 3) {
-  console.log("While loop", j);
-  j++;
-}
+/* ******************************************************************
+  SECTION 11: ARRAYS
+******************************************************************* */
 
-/* ======================================================
-  13. ARRAYS
-====================================================== */
-let arr = [1, 2, 3, 4, 5];
+/*
+Array = ordered collection
+Reference type
+*/
 
-console.log(arr[0]);
-arr.push(6);
+let arr = [1, 2, 3, 4];
+
+arr.push(5);
 arr.pop();
-arr.shift();
 arr.unshift(0);
+arr.shift();
 
-/* ======================================================
-  14. ARRAY METHODS
-====================================================== */
+console.log(arr);
+
+/* ******************************************************************
+  SECTION 12: ARRAY METHODS (VERY IMPORTANT)
+******************************************************************* */
+
+/*
+forEach -> iterate
+map     -> transform
+filter  -> condition
+reduce  -> single value
+*/
+
 arr.forEach((x) => console.log(x));
 
-let doubled = arr.map((x) => x * 2);
-console.log(doubled);
-
-let filtered = arr.filter((x) => x > 2);
-console.log(filtered);
-
+let squared = arr.map((x) => x * x);
+let filtered = arr.filter((x) => x > 1);
 let sum = arr.reduce((acc, cur) => acc + cur, 0);
-console.log(sum);
 
-/* ======================================================
-  15. OBJECTS
-====================================================== */
+console.log(squared, filtered, sum);
+
+/* ******************************************************************
+  SECTION 13: OBJECTS
+******************************************************************* */
+
+/*
+Objects store data in key-value pairs
+*/
+
 let student = {
   name: "Aman",
   age: 21,
@@ -170,46 +250,43 @@ let student = {
 };
 
 console.log(student.name);
-console.log(student.skills[0]);
 
-/* ======================================================
-  16. OBJECT METHODS
-====================================================== */
-let person = {
-  firstName: "Aman",
-  greet: function () {
-    console.log("Hello", this.firstName);
-  },
-};
+/* ******************************************************************
+  SECTION 14: FUNCTIONS
+******************************************************************* */
 
-person.greet();
+/*
+Functions are reusable blocks of code
+*/
 
-/* ======================================================
-  17. FUNCTIONS
-====================================================== */
 function add(a, b) {
   return a + b;
 }
+
 console.log(add(2, 3));
 
-/* ======================================================
-  18. ARROW FUNCTION
-====================================================== */
+/* ******************************************************************
+  SECTION 15: ARROW FUNCTIONS
+******************************************************************* */
+
+/*
+Arrow functions are shorter
+No own 'this'
+*/
+
 const multiply = (a, b) => a * b;
 console.log(multiply(2, 4));
 
-/* ======================================================
-  19. HOISTING
-====================================================== */
-// Variable hoisting (var)
-console.log(x);
-var x = 10;
+/* ******************************************************************
+  SECTION 16: SCOPE
+******************************************************************* */
 
-// let / const hoist hote hain but TDZ me rehte hain
+/*
+Global Scope
+Function Scope
+Block Scope
+*/
 
-/* ======================================================
-  20. SCOPE
-====================================================== */
 let globalVar = "Global";
 
 function testScope() {
@@ -218,12 +295,29 @@ function testScope() {
 }
 testScope();
 
-/* ======================================================
-  21. CLOSURE
-====================================================== */
+/* ******************************************************************
+  SECTION 17: HOISTING
+******************************************************************* */
+
+/*
+var -> hoisted with undefined
+let/const -> hoisted but in TDZ
+*/
+
+console.log(h);
+var h = 10;
+
+/* ******************************************************************
+  SECTION 18: CLOSURE (INTERVIEW FAVORITE)
+******************************************************************* */
+
+/*
+Closure = function remembers outer variables
+*/
+
 function outer() {
   let count = 0;
-  return function inner() {
+  return function () {
     count++;
     console.log(count);
   };
@@ -233,72 +327,85 @@ let counter = outer();
 counter();
 counter();
 
-/* ======================================================
-  22. CALLBACK
-====================================================== */
-function fetchData(callback) {
-  console.log("Fetching...");
+/* ******************************************************************
+  SECTION 19: CALLBACK FUNCTIONS
+******************************************************************* */
+
+/*
+Callback = function passed as argument
+*/
+
+function loadData(callback) {
+  console.log("Loading...");
   callback();
 }
 
-fetchData(() => console.log("Done"));
+loadData(() => console.log("Done"));
 
-/* ======================================================
-  23. PROMISE
-====================================================== */
-let promise = new Promise((resolve, reject) => {
-  let success = true;
-  if (success) resolve("Success");
-  else reject("Error");
-});
-
-promise
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err));
-
-/* ======================================================
-  24. ASYNC / AWAIT
-====================================================== */
-async function asyncFunc() {
-  return "Async Result";
-}
-
-asyncFunc().then((res) => console.log(res));
-
-/* ======================================================
-  25. setTimeout & setInterval
-====================================================== */
-setTimeout(() => {
-  console.log("Timeout executed");
-}, 1000);
-
-let interval = setInterval(() => {
-  console.log("Interval running");
-  clearInterval(interval);
-}, 2000);
-
-/* ======================================================
-  26. EVENT LOOP (NOTE)
-====================================================== */
-// JS is single-threaded
-// Call Stack
-// Web APIs
-// Callback Queue
-// Microtask Queue
-// Event Loop decides execution
-
-/* ======================================================
-  27. DOM (BASIC)
-====================================================== */
-// document.querySelector()
-// addEventListener()
+/* ******************************************************************
+  SECTION 20: PROMISES
+******************************************************************* */
 
 /*
-document.querySelector("button").addEventListener("click", () => {
-  console.log("Button clicked");
-});
+Promise states:
+- pending
+- fulfilled
+- rejected
 */
 
-/* ======================================================
-  END OF COMPLETE JAVASCRIPT SCRIPT
-====================================================== */
+let promise = new Promise((resolve, reject) => {
+  resolve("Promise resolved");
+});
+
+promise.then(console.log);
+
+/* ******************************************************************
+  SECTION 21: ASYNC / AWAIT
+******************************************************************* */
+
+/*
+Async/Await makes async code readable
+*/
+
+async function getData() {
+  return "Async Data";
+}
+
+getData().then(console.log);
+
+/* ******************************************************************
+  SECTION 22: EVENT LOOP (INTERVIEW GOLD)
+******************************************************************* */
+
+/*
+JavaScript is single-threaded.
+
+Components:
+- Call Stack
+- Web APIs
+- Callback Queue
+- Microtask Queue
+- Event Loop
+
+Promise callbacks go to Microtask Queue
+setTimeout goes to Callback Queue
+*/
+
+/* ******************************************************************
+  SECTION 23: DOM (BROWSER JS)
+******************************************************************* */
+
+/*
+DOM allows JS to interact with HTML
+*/
+
+/*
+document.querySelector("button")
+  .addEventListener("click", () => {
+    console.log("Button clicked");
+  });
+*/
+
+/* ******************************************************************
+  END OF JAVASCRIPT FULL COURSE
+******************************************************************* */
