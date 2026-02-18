@@ -143,9 +143,36 @@
 //   console.log(`Hello World !`);
 // })();
 
-function add() {
-  var sum = 2 + 3;
-  console.log(sum);
+// function add() {
+//   var sum = 2 + 3;
+//   console.log(sum);
+// }
+
+// add();
+
+// let firstName;
+// firstName = null;
+// console.log(typeof firstName, firstName);
+
+// console.log(typeof undefined);
+
+// let number1 = 12;
+// let number2 = 12n;
+// console.log(typeof number1);
+// console.log(typeof number2);
+
+// let arr1 = [10, 20, 30, 40];
+// let arr2 = [50, 60, 70, 80, 90];
+
+// let arr3 = [].concat(arr1);
+
+// let arr4 = [...arr1, ...arr2];
+// console.log(arr3);
+
+const cars = ["BMW", "safari", "Audi", "Fortuner"];
+let carsNameUppercase = [];
+for (let i = 0; i < cars.length; i++) {
+  carsNameUppercase.push(cars[i].toLocaleUpperCase());
 }
 
-add();
+console.log(carsNameUppercase);
