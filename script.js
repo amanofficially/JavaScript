@@ -1,6 +1,14 @@
-const user = {
-  username: "Aman",
-  age: 22,
+function sayHello() {
+  console.log("Hello !");
+}
+
+let knowOddEven = function oddEven(num) {
+  if (num % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 };
-const { username: fname, age } = user;
-console.log(fname);
+
+sayHello();
+console.log(knowOddEven(6));
