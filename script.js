@@ -2,7 +2,7 @@ function sayHello() {
   console.log("Hello !");
 }
 
-let knowOddEven = function oddEven(num) {
+let knowOddEven = (num) => {
   if (num % 2 === 0) {
     return true;
   } else {
@@ -11,4 +11,4 @@ let knowOddEven = function oddEven(num) {
 };
 
 sayHello();
-console.log(knowOddEven(6));
+console.log(knowOddEven(2));
