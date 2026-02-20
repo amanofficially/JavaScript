@@ -63,12 +63,23 @@
 // console.log(newStr.length);
 
 // function returning a function
-function sayHello() {
-  console.log("Hello");
-  return function sayNamste() {
-    console.log("Namste");
-  };
+// function sayHello() {
+//   console.log("Hello");
+//   return function sayNamste() {
+//     console.log("Namste");
+//   };
+// }
+
+// let result = sayHello();
+// result();
+
+// In fuction callback we can pass a function as a argument to another function and the function is known as a callback function and in which function we are passing callback fun. is knwon as High-order function/parent function
+function firstFunction(callback) {
+  console.log("Hello welcome user !");
+  let result = callback("Aman");
+  console.log(result);
 }
 
-let result = sayHello();
-result();
+firstFunction((name) => {
+  return name;
+});
