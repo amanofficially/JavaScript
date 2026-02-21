@@ -141,9 +141,16 @@
 // console.log(names2); // ["Ravi", "Priya"]
 
 // Count occurrences
-let fruits = ["apple", "banana", "apple", "mango", "banana", "apple"];
-let count = fruits.reduce((acc, fruit) => {
-  acc[fruit] = (acc[fruit] || 0) + 1;
-  return acc;
-}, {});
-console.log(count); // {apple: 3, banana: 2, mango: 1}
+// let fruits = ["apple", "banana", "apple", "mango", "banana", "apple"];
+// let count = fruits.reduce((acc, fruit) => {
+//   acc[fruit] = (acc[fruit] || 0) + 1;
+//   return acc;
+// }, {});
+// console.log(count); // {apple: 3, banana: 2, mango: 1}
+
+// let arr = new Array(5).fill(10);
+// console.log(arr)
+
+const cars = ["Audi", "Fortuner", "BMW"];
+cars.splice(1, 1, "Tata");
+console.log(cars);
