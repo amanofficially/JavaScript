@@ -9,10 +9,6 @@
 
 - [What You’ll Learn](#what-youll-learn)
 - [Syllabus Covered](#syllabus-covered)
-- [Extra Topics](#extra-topics)
-- [How to Use This Repository](#how-to-use-this-repository)
-- [Who Is This For](#who-is-this-for)
-- [Support](#support)
 
 ---
 
