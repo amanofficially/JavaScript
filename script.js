@@ -44,22 +44,22 @@ console.log(PI); // 3.14159
 // 1.3 Data Types
 // ============================================================
 
-let strName = "Rahul";          // String
+let strName = "Rahul"; // String
 let greeting = "Namaste";
-let age = 25;                   // Number
+let age = 25; // Number
 let price = 99.99;
-let isLoggedIn = true;          // Boolean
+let isLoggedIn = true; // Boolean
 let hasAccount = false;
-let user = null;                // Null — intentionally empty
-let address;                    // Undefined — value assign nahi ki
-console.log(address);           // undefined
+let user = null; // Null — intentionally empty
+let address; // Undefined — value assign nahi ki
+console.log(address); // undefined
 let bigNum = 9007199254740991n; // BigInt — bahut bade numbers ke liye
 
 // typeof operator — type check karne ke liye
-console.log(typeof strName);    // "string"
-console.log(typeof age);        // "number"
+console.log(typeof strName); // "string"
+console.log(typeof age); // "number"
 console.log(typeof isLoggedIn); // "boolean"
-console.log(typeof null);       // "object" ← JS ka famous bug!
+console.log(typeof null); // "object" ← JS ka famous bug!
 
 // ============================================================
 // 1.4 Strings aur String Methods
@@ -68,26 +68,26 @@ console.log(typeof null);       // "object" ← JS ka famous bug!
 let str = "Hello World";
 
 // String Indexing — index 0 se start hota hai
-console.log(str[0]);            // H
-console.log(str[6]);            // W
-console.log(str.length);        // 11
+console.log(str[0]); // H
+console.log(str[6]); // W
+console.log(str.length); // 11
 
 // Common Methods
 console.log(str.toUpperCase()); // HELLO WORLD
 console.log(str.toLowerCase()); // hello world
 console.log(str.includes("World")); // true
-console.log(str.includes("xyz"));   // false
-console.log(str.slice(0, 5));   // Hello
-console.log(str.slice(6));      // World
+console.log(str.includes("xyz")); // false
+console.log(str.slice(0, 5)); // Hello
+console.log(str.slice(6)); // World
 console.log(str.replace("World", "India")); // Hello India
 
 // split — string ko array mein todna
 let words = str.split(" ");
-console.log(words);             // ["Hello", "World"]
+console.log(words); // ["Hello", "World"]
 
 // trim — extra spaces hatao
 let padded = "  Namaste  ";
-console.log(padded.trim());     // "Namaste"
+console.log(padded.trim()); // "Namaste"
 
 // Template Literals (backtick use karo — modern way)
 let tName = "Priya";
@@ -108,21 +108,29 @@ console.log(`5 + 3 = ${5 + 3}`); // 5 + 3 = 8
 // ============================================================
 
 // == vs === — HAMESHA === use karo!
-console.log(5 == "5");   // true  (loose equality — type convert karta hai ❌)
-console.log(5 === "5");  // false (strict equality — value + type dono same chahiye ✅)
-console.log(10 > 5);     // true
-console.log(10 < 5);     // false
-console.log(10 >= 10);   // true
-console.log(10 !== 5);   // true
+console.log(5 == "5"); // true  (loose equality — type convert karta hai ❌)
+console.log(5 === "5"); // false (strict equality — value + type dono same chahiye ✅)
+console.log(10 > 5); // true
+console.log(10 < 5); // false
+console.log(10 >= 10); // true
+console.log(10 !== 5); // true
 
 // Truthy aur Falsy Values
 // Falsy: false, 0, "", null, undefined, NaN
 // Truthy: koi bhi non-zero number, non-empty string, object, array
 
-if (0) { console.log("Nahi chalega"); }        // skip (falsy)
-if ("") { console.log("Yeh bhi nahi"); }        // skip (falsy)
-if ("Hello") { console.log("Yeh chalega!"); }   // ✅ runs
-if (42) { console.log("Number bhi chalega!"); } // ✅ runs
+if (0) {
+  console.log("Nahi chalega");
+} // skip (falsy)
+if ("") {
+  console.log("Yeh bhi nahi");
+} // skip (falsy)
+if ("Hello") {
+  console.log("Yeh chalega!");
+} // ✅ runs
+if (42) {
+  console.log("Number bhi chalega!");
+} // ✅ runs
 
 // if-else, else if
 let marks = 75;
@@ -219,8 +227,8 @@ do {
  */
 
 let fruits = ["Apple", "Banana", "Mango", "Orange"];
-console.log(fruits[0]);     // Apple
-console.log(fruits[2]);     // Mango
+console.log(fruits[0]); // Apple
+console.log(fruits[2]); // Mango
 console.log(fruits.length); // 4
 
 // Mixed types array
@@ -232,19 +240,19 @@ let mixed = [1, "Hello", true, null, { name: "Rahul" }];
 
 let arr = ["A", "B", "C"];
 
-arr.push("D");           // end mein add
-console.log(arr);        // ["A", "B", "C", "D"]
+arr.push("D"); // end mein add
+console.log(arr); // ["A", "B", "C", "D"]
 
 let removed = arr.pop(); // end se remove
-console.log(removed);    // "D"
-console.log(arr);        // ["A", "B", "C"]
+console.log(removed); // "D"
+console.log(arr); // ["A", "B", "C"]
 
-arr.unshift("Z");        // beginning mein add
-console.log(arr);        // ["Z", "A", "B", "C"]
+arr.unshift("Z"); // beginning mein add
+console.log(arr); // ["Z", "A", "B", "C"]
 
 let first = arr.shift(); // beginning se remove
-console.log(first);      // "Z"
-console.log(arr);        // ["A", "B", "C"]
+console.log(first); // "Z"
+console.log(arr); // ["A", "B", "C"]
 
 // Trick: Push/Pop = end se kaam (STACK jaisa — Last In, First Out)
 //        Shift/Unshift = beginning se kaam
@@ -255,7 +263,7 @@ console.log(arr);        // ["A", "B", "C"]
 
 // Primitive — copy by value
 let a = 10;
-let b = a;   // b ko a ki VALUE copy hoti hai
+let b = a; // b ko a ki VALUE copy hoti hai
 b = 20;
 console.log(a); // 10 — a change nahi hua ✅
 console.log(b); // 20
@@ -272,7 +280,7 @@ let original = [1, 2, 3];
 let copy = [...original]; // Naya array — alag memory
 copy.push(4);
 console.log(original); // [1, 2, 3] — safe! ✅
-console.log(copy);     // [1, 2, 3, 4]
+console.log(copy); // [1, 2, 3, 4]
 
 // Arrays merge karna
 let arrX = [1, 2, 3];
@@ -301,6 +309,10 @@ for (let index in colors) {
   console.log(`${index}: ${colors[index]}`);
 }
 
+colors.forEach((value, index) => {
+  console.log(`Index ${index} : ${value},`);
+});
+
 // ============================================================
 // 2.5 Array Destructuring
 // ============================================================
@@ -313,13 +325,13 @@ let f2 = fArr[1];
 
 // Destructuring — naya aur clean tarika ✅
 let [fFirst, fSecond, fThird] = fArr;
-console.log(fFirst);  // Apple
+console.log(fFirst); // Apple
 console.log(fSecond); // Banana
-console.log(fThird);  // Mango
+console.log(fThird); // Mango
 
 // Skip karna
 let [, , fSkip, fFourth] = fArr;
-console.log(fSkip);   // Mango
+console.log(fSkip); // Mango
 console.log(fFourth); // Orange
 
 // Rest operator
@@ -328,7 +340,8 @@ console.log(head); // Apple
 console.log(rest); // ["Banana", "Mango", "Orange"]
 
 // Swap variables
-let x = 1, y = 2;
+let x = 1,
+  y = 2;
 [x, y] = [y, x];
 console.log(x, y); // 2 1
 
@@ -352,7 +365,7 @@ let person = {
 
 // Dot notation
 console.log(person.name); // Amit
-console.log(person.age);  // 28
+console.log(person.age); // 28
 
 // Bracket notation (jab key mein space ho ya key variable mein ho)
 console.log(person["city"]); // Mumbai
@@ -391,7 +404,7 @@ for (let key in student) {
 }
 
 // Object.keys() — keys ki array
-console.log(Object.keys(student));   // ["name", "marks", "grade"]
+console.log(Object.keys(student)); // ["name", "marks", "grade"]
 
 // Object.values() — values ki array
 console.log(Object.values(student)); // ["Sneha", 85, "A"]
@@ -429,7 +442,7 @@ let personObj = { name: "Kavita", age: 30, city: "Delhi", job: "Engineer" };
 // Destructuring
 let { name: pName, age: pAge, city: pCity } = personObj;
 console.log(pName); // Kavita
-console.log(pAge);  // 30
+console.log(pAge); // 30
 
 // Default values
 let { country = "India" } = personObj;
@@ -452,15 +465,18 @@ let students = [
   { name: "Ankit", marks: 78 },
 ];
 
-console.log(students[0].name);  // Ravi
+console.log(students[0].name); // Ravi
 console.log(students[1].marks); // 85
 
 for (let stu of students) {
-  console.log(`${stu.name} ne ${stu.marks} marks aaye`);
+  console.log(`${stu.name} ke ${stu.marks} marks aaye`);
 }
 
 // Nested Destructuring
-let { name: vName, address: { city: vCity, pin: vPin } } = {
+let {
+  name: vName,
+  address: { city: vCity, pin: vPin },
+} = {
   name: "Vikram",
   address: { city: "Jaipur", pin: "302001" },
 };
@@ -508,10 +524,14 @@ console.log(greetExpr("Amit")); // Hello, Amit!
 // ============================================================
 
 // Regular function
-function multiply(a, b) { return a * b; }
+function multiply(a, b) {
+  return a * b;
+}
 
 // Arrow Function
-const multiply2 = (a, b) => { return a * b; };
+const multiply2 = (a, b) => {
+  return a * b;
+};
 
 // Short (implicit return — ek line mein)
 const multiply3 = (a, b) => a * b;
@@ -523,8 +543,8 @@ const square = (n) => n * n;
 const sayHello = () => console.log("Hello!");
 
 console.log(multiply3(4, 5)); // 20
-console.log(square(6));       // 36
-sayHello();                   // Hello!
+console.log(square(6)); // 36
+sayHello(); // Hello!
 
 // ============================================================
 // 4.4 Scope — Block Scope vs Function Scope
@@ -563,14 +583,14 @@ outerFn();
 function greetLang(name3 = "Guest", lang = "Hindi") {
   return `Namaste ${name3}! Language: ${lang}`;
 }
-console.log(greetLang("Raj"));          // Namaste Raj! Language: Hindi
+console.log(greetLang("Raj")); // Namaste Raj! Language: Hindi
 console.log(greetLang("Ali", "Urdu")); // Namaste Ali! Language: Urdu
 
 // Rest Parameters — ...args (multiple arguments collect karta hai)
 function sum(...numbers) {
   return numbers.reduce((total, n) => total + n, 0);
 }
-console.log(sum(1, 2, 3));       // 6
+console.log(sum(1, 2, 3)); // 6
 console.log(sum(10, 20, 30, 40)); // 100
 
 // Parameter Destructuring
@@ -590,7 +610,7 @@ function doOperation(a, b, callback) {
 const addFn = (x, y) => x + y;
 const multiplyFn = (x, y) => x * y;
 
-console.log(doOperation(5, 3, addFn));      // 8
+console.log(doOperation(5, 3, addFn)); // 8
 console.log(doOperation(5, 3, multiplyFn)); // 15
 
 // Functions returning Functions (Closures ka foundation!)
@@ -628,8 +648,8 @@ fruitsArr.forEach((fruit) => console.log(fruit.toUpperCase()));
 let numbers = [1, 2, 3, 4, 5];
 
 let doubled = numbers.map((n) => n * 2);
-console.log(doubled);  // [2, 4, 6, 8, 10]
-console.log(numbers);  // [1, 2, 3, 4, 5] — original unchanged! ✅
+console.log(doubled); // [2, 4, 6, 8, 10]
+console.log(numbers); // [1, 2, 3, 4, 5] — original unchanged! ✅
 
 // Strings uppercase
 let names = ["ram", "shyam", "mohan"];
@@ -690,10 +710,7 @@ let productVal = numArr.reduce((acc, curr) => acc * curr, 1);
 console.log(productVal); // 120
 
 // Maximum find karna
-let maxVal = numArr.reduce(
-  (acc, curr) => (curr > acc ? curr : acc),
-  numArr[0]
-);
+let maxVal = numArr.reduce((acc, curr) => (curr > acc ? curr : acc), numArr[0]);
 console.log(maxVal); // 5
 
 // Count occurrences — advanced use case
@@ -767,7 +784,7 @@ console.log(mySet); // Set {1, 2, 3, 4}
 mySet.add(5);
 mySet.delete(1);
 console.log(mySet.has(2)); // true
-console.log(mySet.size);   // 4
+console.log(mySet.size); // 4
 
 // ✅ Set ka best use case: Array se duplicates hatana
 let dupArr = [1, 2, 2, 3, 3, 3, 4];
@@ -792,8 +809,8 @@ myMap.set(true, "Boolean key");
 
 // get() se value lo
 console.log(myMap.get("name")); // Rahul
-console.log(myMap.get(1));      // Number key
-console.log(myMap.size);        // 3
+console.log(myMap.get(1)); // Number key
+console.log(myMap.size); // 3
 
 console.log(myMap.has("name")); // true
 myMap.delete(true);
@@ -817,9 +834,9 @@ let userObj = {
 };
 
 // Optional Chaining — safely access karo, no crash if undefined
-let pin = userObj?.address?.pin;      // undefined (no error!) ✅
+let pin = userObj?.address?.pin; // undefined (no error!) ✅
 let country2 = userObj?.country?.name; // undefined (no error!) ✅
-console.log(pin);      // undefined
+console.log(pin); // undefined
 console.log(country2); // undefined
 
 // Object.assign — objects merge karna
@@ -850,7 +867,7 @@ let personOOP = {
     console.log(`Meri age ${this.age} hai.`);
   },
 };
-personOOP.greet();     // Hello, main Arjun hun!
+personOOP.greet(); // Hello, main Arjun hun!
 personOOP.introduce(); // Meri age 25 hai.
 
 // ============================================================
@@ -941,10 +958,10 @@ class PersonClass {
 }
 
 let pClass = new PersonClass("Ritu", 28);
-pClass.greet();                     // Namaste, main Ritu hun!
-console.log(pClass.info);           // Ritu (28)
+pClass.greet(); // Namaste, main Ritu hun!
+console.log(pClass.info); // Ritu (28)
 pClass.updateAge = 29;
-console.log(pClass.age);            // 29
+console.log(pClass.age); // 29
 
 let pClass2 = PersonClass.create("Ajay", 35);
 pClass2.greet(); // Namaste, main Ajay hun!
@@ -976,9 +993,9 @@ class DogClass extends AnimalClass {
 }
 
 let myDog = new DogClass("Buddy", "Labrador");
-myDog.speak();  // Buddy barks! Breed: Labrador
-myDog.fetch();  // Buddy fetches the ball!
-console.log(myDog instanceof DogClass);    // true
+myDog.speak(); // Buddy barks! Breed: Labrador
+myDog.fetch(); // Buddy fetches the ball!
+console.log(myDog instanceof DogClass); // true
 console.log(myDog instanceof AnimalClass); // true
 
 // ============================================================
@@ -1033,8 +1050,8 @@ function outerScope() {
   function innerScope() {
     let innerVar = "Main inner hun";
     // Scope chain: inner → outer → global (andar se bahar)
-    console.log(innerVar);  // ✅ apna
-    console.log(outerVar);  // ✅ parent ka
+    console.log(innerVar); // ✅ apna
+    console.log(outerVar); // ✅ parent ka
     console.log(globalVar); // ✅ global
   }
   // console.log(innerVar); // ❌ bahar wala andar nahi dekh sakta
@@ -1098,8 +1115,8 @@ function createBank() {
 }
 
 let myBank = createBank();
-myBank.deposit(1000);          // Deposited: 1000. Balance: 1000
-myBank.withdraw(300);          // Withdrawn: 300. Balance: 700
+myBank.deposit(1000); // Deposited: 1000. Balance: 1000
+myBank.withdraw(300); // Withdrawn: 300. Balance: 700
 console.log(myBank.getBalance()); // 700
 // myBank.balance → undefined (private hai!) ✅
 
@@ -1112,9 +1129,9 @@ const doubleC = createMultiplierClosure(2);
 const tripleC = createMultiplierClosure(3);
 const tenXC = createMultiplierClosure(10);
 
-console.log(doubleC(5));  // 10
-console.log(tripleC(5));  // 15
-console.log(tenXC(5));    // 50
+console.log(doubleC(5)); // 10
+console.log(tripleC(5)); // 15
+console.log(tenXC(5)); // 50
 
 // ============================================================
 // CHAPTER 10: DOM TUTORIAL
@@ -1418,7 +1435,9 @@ myPromise
 
 async function fetchUser(id) {
   try {
-    let response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    let response = await fetch(
+      `https://jsonplaceholder.typicode.com/users/${id}`,
+    );
     if (!response.ok) {
       throw new Error("User not found!");
     }
@@ -1434,7 +1453,6 @@ async function fetchUser(id) {
 async function main() {
   // let userData = await fetchUser(1);
   // console.log(userData.name);
-
   // Parallel requests — Promise.all ke saath
   // let [users, posts] = await Promise.all([
   //   fetch("/api/users").then(r => r.json()),
