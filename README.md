@@ -178,5 +178,3 @@
 - Interview questions
 - Web performance
 - Testing basics
-
----
