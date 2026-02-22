@@ -151,6 +151,21 @@
 // let arr = new Array(5).fill(10);
 // console.log(arr)
 
-const cars = ["Audi", "Fortuner", "BMW"];
-cars.splice(1, 1, "Tata");
-console.log(cars);
+// const cars = ["Audi", "Fortuner", "BMW"];
+// cars.splice(1, 1, "Tata");
+// console.log(cars);
+
+let globalVar = "Main global hun";
+function outer() {
+  let outerVar = "Main outer hun";
+  function inner() {
+    let innerVar = "Main inner hun";
+    // Scope chain: inner ® outer ® global
+    console.log(innerVar); // 3 apna
+    console.log(outerVar); // 3 parent ka
+    console.log(globalVar); // 3 global
+  }
+    //console.log(innerVar); // Error! inner scope nahi dekh sakta
+  inner();
+}
+outer();

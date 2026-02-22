@@ -1,87 +1,223 @@
-# 📘 JavaScript Learning Repository (Beginner to Advanced)
+# JavaScript: Beginning to Mastery
 
-This repository is created to learn and practice **JavaScript from beginner to advanced level**.  
-It contains structured topics, example files, and practice code to build a strong foundation in JavaScript.
+> **A complete roadmap to learn JavaScript from scratch to advanced level**  
+> Well-structured • Beginner-friendly • Interview-oriented
 
 ---
 
-## 🚀 Learning Path
+## Table of Contents
 
-### 01. Basics
-- Variables (var, let, const)
-- Data Types
-- Operators
-- Input & Output
+- [What You’ll Learn](#what-youll-learn)
+- [Syllabus Covered](#syllabus-covered)
+- [Extra Topics](#extra-topics)
+- [How to Use This Repository](#how-to-use-this-repository)
+- [Who Is This For](#who-is-this-for)
+- [Support](#support)
 
-### 02. Control Flow
-- if-else statements
-- switch case
-- Loops (for, while, do-while)
+---
 
-### 03. Functions
-- Function Declaration
-- Function Expression
-- Arrow Functions
-- Scope (Global & Local)
+## What You’ll Learn
 
-### 04. Arrays & Objects
-- Arrays & Array Methods
-- Objects & Object Methods
+- JavaScript from **Beginner to Advanced**
+- Core programming fundamentals
+- DOM manipulation and Events
+- Asynchronous JavaScript
+- Object-Oriented JavaScript
+- Interview-focused concepts
 
-### 05. Strings & Numbers
-- String Methods
-- Template Literals
-- Number Methods
+---
 
-### 06. DOM Manipulation
-- DOM Selectors
-- Events Handling
-- Style & Class Manipulation
-- Form Handling
+## Syllabus Covered
 
-### 07. Asynchronous JavaScript
-- Callbacks
-- Promises
-- Async / Await
-- setTimeout & setInterval
+---
 
-### 08. ES6+ Features
-- let & const
-- Destructuring
-- Spread & Rest Operator
-- Modules
+### 🔹 1. JavaScript Basics
 
-### 09. Advanced Concepts
-- Closures
+- JavaScript vs ECMAScript
+- Install VS Code and run first program
+- Hello World
+- Variables: `var`, `let`, `const`
+- String indexing and string methods
+- Template strings
+- `null`, `undefined`, `BigInt`, `typeof`
+- Booleans and comparison operators
+- Truthy and falsy values
+
+---
+
+### 🔹 2. Control Flow
+
+- `if`, `else`, `else if`
+- Ternary operator
+- Logical operators (`&&`, `||`)
+- Switch statement
+- Loops:
+  - `while`
+  - `do while`
+  - `for`
+  - `break` and `continue`
+
+---
+
+### 🔹 3. Arrays in JavaScript
+
+- Introduction to arrays
+- `push`, `pop`, `shift`, `unshift`
+- Primitive vs reference data types
+- Clone arrays and spread operator
+- Loops with arrays
+- `for...of` loop
+- `for...in` loop
+- Array destructuring
+
+---
+
+### 🔹 4. Objects in JavaScript
+
+- Introduction to objects
+- Dot vs bracket notation
+- Iterating objects
+- Computed properties
+- Spread operator in objects
+- Object destructuring
+- Objects inside arrays
+- Nested destructuring
+
+---
+
+### 🔹 5. Functions
+
+- Function declaration
+- Function expression
+- Arrow functions
+- Hoisting (introduction)
+- Functions inside functions
+- Lexical scope
+- Block scope vs function scope
+- Default parameters
+- Rest parameters
+- Parameter destructuring
+- Callback functions (introduction)
+- Functions returning functions
+
+---
+
+### 🔹 6. Very Important Array Methods
+
+- `forEach`
+- `map`
+- `filter`
+- `reduce`
+- `sort`
+- `find`
+- `every`
+- `some`
+- `fill`
+- `splice`
+
+---
+
+### 🔹 7. More Useful JavaScript Concepts
+
+- Iterables
+- Sets
+- Maps
+- `Object.assign()`
+- Optional chaining
+
+---
+
+### 🔹 8. Object Oriented JavaScript
+
+- Methods
+- `this` keyword and window object
+- `call`, `apply`, `bind`
+- `this` inside arrow functions
+- Factory functions
+- Prototypes and `__proto__`
+- `new` keyword
+- Constructor functions
+- Class keyword
+- `super` keyword
+- Method overriding
+- Getters and setters
+- Static methods and properties
+
+---
+
+### 🔹 9. How JavaScript Works
+
+- Global execution context
+- `this` and window
 - Hoisting
-- this Keyword
-- Event Loop
-
-### 10. Practice & Mini Projects
-- Counter App
-- Calculator
-- To-Do App
+- `let` and `const` hoisting (TDZ)
+- Function execution context
+- Scope chain and lexical environment
 
 ---
 
-## 🎯 Who This Repo Is For
-- Beginners learning JavaScript
-- Students practicing core concepts
-- Anyone revising JavaScript from basics to advanced
+### 🔹 10. Closures
+
+- Introduction to closures
+- Closure examples
 
 ---
 
-## 🛠 How to Use
-1. Start from the `01_Basics` folder
-2. Practice each topic with examples
-3. Move step-by-step to advanced concepts
-4. Build mini projects for hands-on learning
+### 🔹 11. DOM (Document Object Model)
+
+- HTML and CSS crash course
+- `async` vs `defer`
+- Selecting elements
+- `textContent` vs `innerText`
+- Styling elements using JavaScript
+- Get and set attributes
+- `innerHTML`
+- DOM tree and nodes
+- `classList`
+- Create and insert elements
+- Clone nodes
+- Element dimensions
 
 ---
 
-## 📌 Note
-This repository is for **learning and practice purposes** only.
+### 🔹 12. Events
+
+- Introduction to events
+- `this` keyword inside event listeners
+- Event object
+- Event bubbling
+- Event capturing
+- Event delegation
+- Mini projects
 
 ---
 
-### ⭐ If you find this helpful, give the repo a star!
+### 🔹 13. Asynchronous JavaScript
+
+- Synchronous vs asynchronous JavaScript
+- `setTimeout()`
+- Callback queue
+- `setInterval()`
+- Callback hell
+
+---
+
+### 🔹 14. Promises and Network Requests
+
+- Introduction to promises
+- Microtask queue
+- Promise chaining
+- AJAX and HTTP
+- XHR requests
+- Fetch API
+- Error handling
+- `async` and `await`
+
+---
+
+### 🔹 15. ES6 Modules
+
+- Import and export
+- Code splitting
+
+---
