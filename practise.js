@@ -68,3 +68,33 @@
 // // user1.about();
 // // console.log(user1.is18());
 // // user1.sing();
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  greet() {
+    console.log(`Hello i'm ${this.name}.`);
+  }
+}
+
+class User extends Person {
+  constructor(name, age, city) {
+    super(name, age);
+    this.city = city;
+  }
+  get greet() {
+    //getter
+    console.log(`Hello i'm ${this.name} from ${this.city}.`);
+  }
+  set updateCity(newCity) {
+    this.city = newCity;
+  }
+}
+
+let p1 = new Person("Aman", 21);
+let p2 = new User("Aman", 21, "Indore");
+console.log(p2);
+p2.updateCity = "Pune";
+console.log(p2);
