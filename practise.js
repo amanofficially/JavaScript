@@ -149,6 +149,27 @@ class Person {
   }
 }
 
+class User extends Person {
+  constructor(name, age, id, city) {
+    super(name, age, id);
+    this.city = city;
+  }
+
+  static greet() {
+    console.log(`Hello & Welcome ${this.name}`);
+  }
+
+  get about() {
+    return `Hello i'm ${this.name} form ${this.city}.`;
+  }
+}
+
 let p1 = new Person("Aman", 22, 401);
+let p2 = new User("Anand", 0, 406, "Indore");
 console.log(p1);
 p1.about();
+console.log(p2);
+console.log(p2.about);
+p2.upadteAge = 22;
+console.log(p2);
+User.greet();
