@@ -69,32 +69,86 @@
 // // console.log(user1.is18());
 // // user1.sing();
 
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   greet() {
+//     console.log(`Hello i'm ${this.name}.`);
+//   }
+// }
+
+// class User extends Person {
+//   constructor(name, age, city) {
+//     super(name, age);
+//     this.city = city;
+//   }
+//   get greet() {
+//     //getter
+//     console.log(`Hello i'm ${this.name} from ${this.city}.`);
+//   }
+//   set updateCity(newCity) {
+//     this.city = newCity;
+//   }
+// }
+
+// let p1 = new Person("Aman", 21);
+// let p2 = new User("Aman", 21, "Indore");
+// console.log(p2);
+// p2.updateCity = "Pune";
+// console.log(p2);
+
+// function func() {
+//   let count = 0;
+//   return function () {
+//     if (count < 1) {
+//       console.log(`Hi you called me !`);
+//       count++;
+//     } else {
+//       console.log(`Main already call ho chuka hun !`);
+//     }
+//   };
+// }
+
+// const myFun = func();
+// myFun();
+// myFun();
+
+// const usr1 = {
+//   name: "Aman",
+//   age: 22,
+//   id: 401,
+// };
+
+// const usr2 = {
+//   name: "Anand",
+//   age: 21,
+//   id: 406,
+// };
+
+// const userMethods = {
+//   about: function () {
+//     return `Hello i'm ${this.name} and i'm ${this.age} years old.`;
+//   },
+//   is18: function () {
+//     return age >= 18;
+//   },
+//   address: function () {
+//     console.log(`Hello i'm from ${this.city}.`);
+//   },
+// };
 class Person {
-  constructor(name, age) {
+  constructor(name, age, id) {
     this.name = name;
     this.age = age;
+    this.id = id;
   }
-  greet() {
-    console.log(`Hello i'm ${this.name}.`);
-  }
-}
-
-class User extends Person {
-  constructor(name, age, city) {
-    super(name, age);
-    this.city = city;
-  }
-  get greet() {
-    //getter
-    console.log(`Hello i'm ${this.name} from ${this.city}.`);
-  }
-  set updateCity(newCity) {
-    this.city = newCity;
+  about() {
+    console.log(`Hello i'm ${this.name}`);
   }
 }
 
-let p1 = new Person("Aman", 21);
-let p2 = new User("Aman", 21, "Indore");
-console.log(p2);
-p2.updateCity = "Pune";
-console.log(p2);
+let p1 = new Person("Aman", 22, 401);
+console.log(p1);
+p1.about();
