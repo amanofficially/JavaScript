@@ -138,38 +138,66 @@
 //     console.log(`Hello i'm from ${this.city}.`);
 //   },
 // };
-class Person {
-  constructor(name, age, id) {
-    this.name = name;
-    this.age = age;
-    this.id = id;
-  }
-  about() {
-    console.log(`Hello i'm ${this.name}`);
-  }
+// class Person {
+//   constructor(name, age, id) {
+//     this.name = name;
+//     this.age = age;
+//     this.id = id;
+//   }
+//   about() {
+//     console.log(`Hello i'm ${this.name}`);
+//   }
+// }
+
+// class User extends Person {
+//   constructor(name, age, id, city) {
+//     super(name, age, id);
+//     this.city = city;
+//   }
+
+//   static greet() {
+//     console.log(`Hello & Welcome ${this.name}`);
+//   }
+
+//   get about() {
+//     return `Hello i'm ${this.name} form ${this.city}.`;
+//   }
+// }
+
+// let p1 = new Person("Aman", 22, 401);
+// let p2 = new User("Anand", 0, 406, "Indore");
+// console.log(p1);
+// p1.about();
+// console.log(p2);
+// console.log(p2.about);
+// p2.upadteAge = 22;
+// console.log(p2);
+// User.greet();
+
+function createBank() {
+  let balance = 0;
+
+  return {
+    deposit(amount) {
+      balance += amount;
+      console.log(`Deposited: ${amount}\nBalance: ${balance}`);
+    },
+    withdraw(amount) {
+      if (amount > balance) {
+        console.log("Insufficient funds!");
+      } else {
+        balance -= amount;
+        console.log(`Withdrawn: ${amount}\nBalance: ${balance}`);
+      }
+    },
+    getBalance() {
+      return balance;
+    },
+  };
 }
 
-class User extends Person {
-  constructor(name, age, id, city) {
-    super(name, age, id);
-    this.city = city;
-  }
-
-  static greet() {
-    console.log(`Hello & Welcome ${this.name}`);
-  }
-
-  get about() {
-    return `Hello i'm ${this.name} form ${this.city}.`;
-  }
-}
-
-let p1 = new Person("Aman", 22, 401);
-let p2 = new User("Anand", 0, 406, "Indore");
-console.log(p1);
-p1.about();
-console.log(p2);
-console.log(p2.about);
-p2.upadteAge = 22;
-console.log(p2);
-User.greet();
+let myBank = createBank();
+// myBank.deposit(20000);
+// myBank.withdraw(10000);
+myBank.deposit(50000);
+console.log(myBank.getBalance());
