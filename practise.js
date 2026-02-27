@@ -174,30 +174,41 @@
 // console.log(p2);
 // User.greet();
 
-function createBank() {
-  let balance = 0;
+// function createBank() {
+//   let balance = 0;
 
-  return {
-    deposit(amount) {
-      balance += amount;
-      console.log(`Deposited: ${amount}\nBalance: ${balance}`);
-    },
-    withdraw(amount) {
-      if (amount > balance) {
-        console.log("Insufficient funds!");
-      } else {
-        balance -= amount;
-        console.log(`Withdrawn: ${amount}\nBalance: ${balance}`);
-      }
-    },
-    getBalance() {
-      return balance;
-    },
-  };
-}
+//   return {
+//     deposit(amount) {
+//       balance += amount;
+//       console.log(`Deposited: ${amount}\nBalance: ${balance}`);
+//     },
+//     withdraw(amount) {
+//       if (amount > balance) {
+//         console.log("Insufficient funds!");
+//       } else {
+//         balance -= amount;
+//         console.log(`Withdrawn: ${amount}\nBalance: ${balance}`);
+//       }
+//     },
+//     getBalance() {
+//       return balance;
+//     },
+//   };
+// }
 
-let myBank = createBank();
-// myBank.deposit(20000);
-// myBank.withdraw(10000);
-myBank.deposit(50000);
-console.log(myBank.getBalance());
+// let myBank = createBank();
+// // myBank.deposit(20000);
+// // myBank.withdraw(10000);
+// myBank.deposit(50000);
+// console.log(myBank.getBalance());
+
+//Asynchronous JavaScript
+console.log(`Script Started.`);
+
+const id = setTimeout(() => {
+  console.log(`Hello World I'm setTimeout.`);
+}, 1000);
+
+console.log(`Clearning SetTimeout`);
+clearTimeout(id);
+console.log(`Script Ended.`);
