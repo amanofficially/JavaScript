@@ -203,12 +203,37 @@
 // console.log(myBank.getBalance());
 
 //Asynchronous JavaScript
-console.log(`Script Started.`);
+// console.log(`Script Started.`);
 
-const id = setTimeout(() => {
-  console.log(`Hello World I'm setTimeout.`);
+// const id = setTimeout(() => {
+//   console.log(`Hello World I'm setTimeout.`);
+// }, 1000);
+
+// console.log(`Clearning SetTimeout`);
+// clearTimeout(id);
+// console.log(`Script Ended.`);
+
+// console.log(`Script Started.`);
+
+// const id = setInterval(() => {
+//   console.log(`${Math.floor(Math.random(100) * 10)}`);
+// }, 1floor
+// // console.log(`Clearning SetTimeout`);
+// // clearTimeout(id);
+// console.log(`Script Ended.`);
+
+const body = document.body;
+const button = document.querySelector(".btn");
+
+const id = setInterval(() => {
+  const red = Math.floor(Math.random() * 126);
+  const green = Math.floor(Math.random() * 126);
+  const blue = Math.floor(Math.random() * 126);
+  const rgb = `rgb(${red},${green},${blue})`;
+  body.style.backgroundColor = rgb;
 }, 1000);
 
-console.log(`Clearning SetTimeout`);
-clearTimeout(id);
-console.log(`Script Ended.`);
+button.addEventListener("click", () => {
+  clearInterval(id);
+  button.textContent = body.style.background;
+});

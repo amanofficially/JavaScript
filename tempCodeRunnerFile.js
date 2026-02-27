@@ -1,2 +1,2 @@
-myBank.deposit(20000);
-// myBank.withdraw(10000);
+console.log(`Clearning SetTimeout`);
+// clearTimeout(id);
