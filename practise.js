@@ -237,3 +237,11 @@
 //   clearInterval(id);
 //   button.textContent = body.style.background;
 // });
+
+function getNumber(a, b, callback) {
+  console.log(`Numbers are :- ${a} ${b}`);
+  callback(a, b);
+}
+getNumber(10, 20, (a, b) => {
+  console.log(`Sum :- ${a + b}`);
+});
