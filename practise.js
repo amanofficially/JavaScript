@@ -238,10 +238,44 @@
 //   button.textContent = body.style.background;
 // });
 
-function getNumber(a, b, callback) {
-  console.log(`Numbers are :- ${a} ${b}`);
-  callback(a, b);
-}
-getNumber(10, 20, (a, b) => {
-  console.log(`Sum :- ${a + b}`);
-});
+// const heading1 = document.querySelector(".heading1");
+// const heading2 = document.querySelector(".heading2");
+// const heading3 = document.querySelector(".heading3");
+// const heading4 = document.querySelector(".heading4");
+// const heading5 = document.querySelector(".heading5");
+// const heading6 = document.querySelector(".heading6");
+// const heading7 = document.querySelector(".heading7");
+// const heading8 = document.querySelector(".heading8");
+// const heading9 = document.querySelector(".heading9");
+// const heading10 = document.querySelector(".heading10");
+// setTimeout(() => {
+//   heading1.textContent = "Hello";
+//   setTimeout(() => {
+//     heading2.textContent = "Hello";
+//     setTimeout(() => {
+//       heading3.textContent = "Hello";
+//       setTimeout(() => {
+//         heading4.textContent = "Hello";
+//         setTimeout(() => {
+//           heading5.textContent = "Hello";
+//           setTimeout(() => {
+//             heading6.textContent = "Hello";
+//             setTimeout(() => {
+//               heading7.textContent = "Hello";
+//               setTimeout(() => {
+//                 heading8.textContent = "Hello";
+//                 setTimeout(() => {
+//                   heading9.textContent = "Hello";
+//                   setTimeout(() => {
+//                     heading10.textContent = "Hello";
+//                   }, 1000);
+//                 }, 1000);
+//               }, 1000);
+//             }, 1000);
+//           }, 1000);
+//         }, 1000);
+//       }, 1000);
+//     }, 1000);
+//   }, 1000);
+// }, 1000);
+
