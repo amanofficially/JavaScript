@@ -279,3 +279,25 @@
 //   }, 1000);
 // }, 1000);
 
+let bucket = ["coffee", "chips", "vegeies", "rice", "salt"];
+
+let firedRicePromise = new Promise((resolve, reject) => {
+  if (
+    bucket.includes("rice") &&
+    bucket.includes("salt") &&
+    bucket.includes("vegeies")
+  ) {
+    resolve("fried rice");
+  } else {
+    reject("Couldn't do now.");
+  }
+});
+
+firedRicePromise.then(
+  (value) => {
+    console.log(`Let's Eat ${value}.`);
+  },
+  (error) => {
+    console.log(error);
+  },
+);
