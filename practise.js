@@ -293,11 +293,10 @@ let firedRicePromise = new Promise((resolve, reject) => {
   }
 });
 
-firedRicePromise.then(
-  (value) => {
+firedRicePromise
+  .then((value) => {
     console.log(`Let's Eat ${value}.`);
-  },
-  (error) => {
+  })
+  .catch((error) => {
     console.log(error);
-  },
-);
+  });
