@@ -279,23 +279,46 @@
 //   }, 1000);
 // }, 1000);
 
-let bucket = ["coffee", "chips", "vegeies", "rice", "salt"];
+// let bucket = ["coffee", "chips", "vegeies", "rice", "salt"];
 
-let firedRicePromise = new Promise((resolve, reject) => {
-  if (
-    bucket.includes("rice") &&
-    bucket.includes("salt") &&
-    bucket.includes("vegeies")
-  ) {
-    resolve("fried rice");
-  } else {
-    reject("Couldn't do now.");
-  }
-});
+// let friedRicePromise = new Promise((resolve, reject) => {
+//   if (
+//     bucket.includes("rice") &&
+//     bucket.includes("salt") &&
+//     bucket.includes("vegeies")
+//   ) {
+//     resolve("fried rice");
+//   } else {
+//     reject("Couldn't do now.");
+//   }
+// });
 
-firedRicePromise
+// friedRicePromise
+//   .then((value) => {
+//     console.log(`Let's Eat ${value}.`);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+function myPromise() {
+  let bucket = ["coffee", "chips", "vegeies", "rice", "salt"];
+  return new Promise((resolve, reject) => {
+    if (
+      bucket.includes("rice") &&
+      bucket.includes("salt") &&
+      bucket.includes("vegeies")
+    ) {
+      resolve("fried rice");
+    } else {
+      reject("Couldn't do now.");
+    }
+  });
+}
+
+myPromise()
   .then((value) => {
-    console.log(`Let's Eat ${value}.`);
+    console.log(`Let's eat ${value}.`);
   })
   .catch((error) => {
     console.log(error);
