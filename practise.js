@@ -301,25 +301,29 @@
 //     console.log(error);
 //   });
 
-function myPromise() {
-  let bucket = ["coffee", "chips", "vegeies", "rice", "salt"];
-  return new Promise((resolve, reject) => {
-    if (
-      bucket.includes("rice") &&
-      bucket.includes("salt") &&
-      bucket.includes("vegeies")
-    ) {
-      resolve("fried rice");
-    } else {
-      reject("Couldn't do now.");
-    }
-  });
-}
+// function myPromise() {
+//   let bucket = ["coffee", "chips", "vegeies", "rice", "salt"];
+//   return new Promise((resolve, reject) => {
+//     if (
+//       bucket.includes("rice") &&
+//       bucket.includes("salt") &&
+//       bucket.includes("vegeies")
+//     ) {
+//       resolve("fried rice");
+//     } else {
+//       reject("Couldn't do now.");
+//     }
+//   });
+// }
 
-myPromise()
-  .then((value) => {
-    console.log(`Let's eat ${value}.`);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+// myPromise()
+//   .then((value) => {
+//     console.log(`Let's eat ${value}.`);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+let arr = [10, 20];
+
+console.log(arr.length);
