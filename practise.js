@@ -324,6 +324,14 @@
 //     console.log(error);
 //   });
 
-let arr = [10, 20];
+// console.log("Hello World !");
 
-console.log(arr.length);
+// var str = "Aman";
+// var age = 23;
+// console.log(str);
+
+// let fname = "Aman";
+// console.log(fname);
+
+
+
