@@ -81,7 +81,7 @@ arr.shift();
 console.log("shift:", arr);
 
 // splice() → add / remove / replace
-arr.splice(1, 1, 99);
+arr.splice(1, 2, 99);
 console.log("splice:", arr);
 
 // sort()

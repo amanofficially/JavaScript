@@ -138,7 +138,7 @@ console.log(mixedArray);
 console.log(numbers[0]); // first element
 
 // Modifying array
-numbers.push(50);
+console.log(numbers.push(50));
 numbers.pop();
 
 console.log("Updated Array:", numbers);
